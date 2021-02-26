@@ -1,0 +1,52 @@
+
+$color-btn-text:$darkblue;
+$color-btn-default:$color-main;
+$color-btn-hot:$red;
+$color-btn-cool:$blue;
+$color-btn-awesome:$green;
+$roundness:20px 0px 20px 0;
+
+%btn {
+    display: inline-block;
+    padding: 6px 12px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-family: $font-highlight;
+    user-select: none;
+    
+}
+
+
+$color-btn : (
+    default:$color-main,
+    hot:$red,
+    cool:$blue,
+    awesome:$purple
+);
+
+@each $key, $value in $color-btn {
+    .btn-#{$key} {
+        @extend %btn;
+        background-color: $value;
+    }
+
+}
+
+.grid{
+    @include clearfix;
+    .item{
+        float: left;
+        @include imagegrid(3, 2%);
+    }
+    img{
+        display: block;
+        
+        max-width: 100%;
+        border-radius:nth($roundness,1);
+
+    }
+}
