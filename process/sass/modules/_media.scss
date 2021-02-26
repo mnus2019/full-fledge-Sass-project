@@ -1,0 +1,49 @@
+$color-item-border:$red;
+$color-media-head:$blue;
+
+
+.media{
+    margin: o;
+    padding: 0;
+    list-style: none;
+    .item{
+        margin-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 10px;
+        border-top: 1px dotted $color-item-border;
+        padding-top:  10px ;
+        
+        &:hover{
+            background: $yellow;
+        }
+        &:last-of-type{
+            border-bottom: 1px dotted $color-item-border; ;
+        }
+    }
+
+.head{
+    margin: o;
+    padding: 0;
+    color: $color-media-head;
+    font: size 2rem;
+   
+}
+p{
+    margin: o;
+    font: size 1.5rem;
+    #typography & {
+        color:$red;
+    }
+   
+}
+img{
+
+    float: left;
+    margin-right: 10px;
+
+}
+a{
+    text-decoration: none;
+    color: $color-main;
+}
+}
